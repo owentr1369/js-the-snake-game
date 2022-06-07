@@ -28,8 +28,38 @@ body {
 .snake {
   background-color: rgb(122, 214, 2);
   border: 0.25vmin solid black;
+  border-radius: 40%;
+}
+.snake:first-child {
+  position: relative;
+}
+.snake:first-child::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.snake:first-child::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 .food {
   background-color: rgb(255, 86, 35);
   border: 0.25vmin solid black;
+  border-radius: 40%;
 }
